@@ -1,0 +1,13 @@
+﻿@using TestMVC.Models;
+@model ListModel
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<ul>
+    @foreach (var item in ListModel.getEventList())
+	{
+		<li>@item.title @item.description = @item.location</li>
+	}
+</ul>
