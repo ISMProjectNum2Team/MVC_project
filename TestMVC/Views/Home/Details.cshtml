@@ -4,10 +4,11 @@
     ViewBag.Title = "dtails";
     var item = ViewBag.Event;
 }
-
+<link href="~/home/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css"/>
 <h2>List</h2>
-<ul>
-		<li>@item.title @item.description = @item.location</li>
-</ul>
-
+<a href="/home/index">HOME</a> | <a href="/home/addevent">ADD NEW EVENT</a> | <a href="/home/list">EVENTS</a>
+<h4>@item.title @item.description = @item.location</h4>
+@item.details
+<input type="button" value="Join" style="btn btn-default"/>
 
