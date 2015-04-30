@@ -1,5 +1,13 @@
-﻿@{
-    ViewBag.Title = "Details";
+﻿@using TestMVC.Models;
+@model ListModel
+@{
+    ViewBag.Title = "dtails";
+    var item = ViewBag.Event;
 }
 
-<h2>Details</h2>
+<h2>List</h2>
+<ul>
+		<li>@item.title @item.description = @item.location</li>
+</ul>
+
+

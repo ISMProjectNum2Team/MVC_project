@@ -29,6 +29,7 @@ namespace TestMVC.Models
         public DateTime dateTo { get {
             return _dateTo;
         } }
+        
         public Event(string title, string description, string location,
                     DateTime dateFrom, DateTime dateTo) {
             _title = title;
@@ -43,20 +44,25 @@ namespace TestMVC.Models
             _description = description;
             _location = location;
             _dateFrom = DateTime.Now;
-            _dateTo = new DateTime(3000,1,1);
+            _dateTo = new DateTime(3000, 1, 1);
         }
-
+        
     }
     public class ListModel
     {
+        static List<Event> tmp = new List<Event>();
+        
         public static List<Event> getEventList(){
-            var tmp = new List<Event>();
             tmp.Add(new Event("1", "111", "ism"));
             tmp.Add(new Event("1", "111", "ism"));
             tmp.Add(new Event("1", "111", "ism"));
             tmp.Add(new Event("1", "111", "ism"));
             tmp.Add(new Event("1", "111", "ism"));
             return tmp;
+        }
+        public static Event getByID(int id)
+        {
+            return tmp.ElementAt(id);
         }
     }
 }
