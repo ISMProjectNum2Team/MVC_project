@@ -13,7 +13,7 @@
         foreach (var item in ListModel.getEventList())
 	    {
             counter++;
-		    <li><a href="/home/details?id=@counter">@item.title @item.description = @item.location</a></li>
+		    <li><a href="/home/details?id=@counter">@item.title @item.description = @item.location (@item.dateFrom.ToString() - @item.dateTo.ToString())</a></li>
 	    }    
     }
     

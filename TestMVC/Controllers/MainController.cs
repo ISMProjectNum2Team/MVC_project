@@ -36,7 +36,7 @@ namespace TestMVC.Controllers
         public string AddEvent(string title, string description, string details, string location)
         {
             ListModel.getEventList().Add(new Event(title, description, details, location));
-            return "<div style='margin: 0 auto; display: inline-block'>Event added! You will be redirected to list at 3 seconds.</div><script>setTimeout(function() { document.location='/home/list'; }, 3000)</script>";
+            return "<div style='text-align: center'>Event added! You will be redirected to list at 3 seconds.</div><script>setTimeout(function() { document.location='/home/list'; }, 3000)</script>";
         }
     }
 }
