@@ -36,17 +36,5 @@ namespace TestMVC.Controllers
             Event e = ListModel.getByID(id);
             return View(e);
         }
-
-        public ActionResult AddEvent()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public string AddEvent(string title, string description, string details, string location)
-        {
-            ListModel.getEventList().Add(new Event(title, description, details, location));
-            return "<div style='text-align: center'>Event added! You will be redirected to list at 3 seconds.</div><script>setTimeout(function() { document.location='/home/list'; }, 3000)</script>";
-        }
     }
 }

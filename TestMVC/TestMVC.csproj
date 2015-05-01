@@ -143,9 +143,6 @@
     <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\AddEvent.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
