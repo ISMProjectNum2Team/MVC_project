@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-
 namespace TestMVC.Models
 {
     public class Event
@@ -72,6 +71,7 @@ namespace TestMVC.Models
         }
         
     }
+    
     public class ListModel
     {
         static List<Event> tmp = new List<Event>();

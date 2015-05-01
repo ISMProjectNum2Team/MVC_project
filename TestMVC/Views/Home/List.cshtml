@@ -1,20 +1,31 @@
-﻿@using TestMVC.Models;
-@model ListModel
+﻿
+@model IEnumerable<TestMVC.Models.Event>
 @{
     ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/home/style.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css" />
-<h2>List</h2>
-<a href="/home/index">HOME</a> | <a href="/home/addevent">ADD NEW EVENT</a> | <a href="/home/list">EVENTS</a>
-<ul>
-    @{
-        var counter = 0;
-        foreach (var item in ListModel.getEventList())
-	    {
-            counter++;
-		    <li><a href="/home/details?id=@counter">@item.title @item.description = @item.location (@item.dateFrom.ToString() - @item.dateTo.ToString())</a></li>
-	    }    
-    }
-    
-</ul>
+
+<table>
+    <tr>
+        <th>Event</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Date(from)</th>
+        <th>Date (to)</th>
+    </tr>   
+@{
+    var counter = 0;
+    foreach (var item in Model)
+	{
+        counter++;
+        <tr>
+            <td>@item.title</td>
+            <td>@item.description</td>
+            <td>@item.location</td>
+            <td>@item.dateFrom.ToString()</td>
+            <td>@item.dateTo.ToString()</td>
+            <td><a href="/home/details?id=@counter">JOIN</a></td>
+        </tr>
+	}    
+}
+</table>

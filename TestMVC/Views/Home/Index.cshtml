@@ -1,18 +1,5 @@
-﻿@using TestMVC.Models;
-@model ListModel
+﻿
 @{
-    var events = ListModel.getEventList();
-    if (events.Count == 0)
-    {
-        events.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
-        events.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
-        events.Add(new Event("курсач", "сдать курсач", "рили надо сдать", "универ"));
-        events.Add(new Event("тест", "тесттест", "тесттесттест", "место"));
-        events.Add(new Event("1", "2", "3", "4"));
-    }
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/home/style.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css" />
-<h2>Index</h2>
-<a href="/home/index">HOME</a> | <a href="/home/addevent">ADD NEW EVENT</a> | <a href="/home/list">EVENTS</a>
