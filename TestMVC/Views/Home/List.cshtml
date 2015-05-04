@@ -24,7 +24,7 @@
             <td>@item.location</td>
             <td>@item.dateFrom.ToString()</td>
             <td>@item.dateTo.ToString()</td>
-            <td><a href="/home/details?id=@counter">JOIN</a></td>
+            <td>@Html.ActionLink("JOIN", "Details", "Home", new {id=counter}, null)</td>
         </tr>
 	}    
 }

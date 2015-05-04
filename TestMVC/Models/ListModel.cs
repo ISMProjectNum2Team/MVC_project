@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace TestMVC.Models
 {
@@ -13,18 +14,22 @@ namespace TestMVC.Models
         string _details;
         DateTime _dateFrom;
         DateTime _dateTo;
+
+        [Display(Name = "Event")]
         public string title { 
             get
             {
                 return _title;
             }
         }
+        [Display(Name = "Description")]
         public string description { 
             get
             {
                 return _description;
             } 
         }
+        [Display(Name = "Details")]
         public string details
         {
             get
@@ -32,18 +37,21 @@ namespace TestMVC.Models
                 return _details;
             }
         }
+        [Display(Name = "Location")]
         public string location {
             get
             {
                 return _location;
             }
         }
+        [Display(Name = "Start from")]
         public DateTime dateFrom { 
             get
             {
                 return _dateFrom;
             }
         }
+        [Display(Name = "End event")]
         public DateTime dateTo { 
             get 
             {
