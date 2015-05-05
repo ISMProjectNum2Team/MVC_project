@@ -14,7 +14,7 @@ namespace TestMVC
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Home",
-                url: "{controller}/{action}",
+                url: "Home/Index",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
