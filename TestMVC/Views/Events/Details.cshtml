@@ -5,6 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@Html.DisplayForModel()
-
-<input type="button" value="Join" style="btn btn-default"/>
+<div class="jumbotron">
+  <h1>@Model.Title</h1>
+    <p>@Model.Location</p>
+    <p>@Model.Description</p>
+    <p>@Model.Details</p>
+    <p>@Model.DateFrom - @Model.DateTo</p>
+  <p><a class="btn btn-primary btn-lg">Join</a></p>
+</div>

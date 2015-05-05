@@ -11,3 +11,7 @@ div.display-label {
 table,th{
     text-align: center;
 }
+.jumbotron {
+    text-align: center;
+    background-color: white;
+}
