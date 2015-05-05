@@ -13,6 +13,7 @@ nav ul li {
     display: inline;
     margin-right: 10px;
 }
+div.display-label {
     font-size: 1.4em;
 }
 table th {

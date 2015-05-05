@@ -13,14 +13,17 @@ namespace TestMVC.Controllers
 
         public ActionResult Index()
         {
-            var model = new ListModel();
-            return View(model);
+            var model = new EventDataProvider();
+            return View(model.GetEventList());
         }
-        //[HttpGet]
-        //public ActionResult Details(int id)
-        //{
-        //    Event e = ListModel.getByID(id);
-        //    return View(e);
-        //}
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var model = new EventDataProvider();
+            if (id < 1 || id > model.Data.Count) {
+                return HttpNotFound();
+            }
+            return View(model.GetByID(id));
+        }
     }
 }

@@ -19,12 +19,12 @@
 	{
         counter++;
         <tr>
-            <td>@item.title</td>
-            <td>@item.description</td>
-            <td>@item.location</td>
-            <td>@item.dateFrom.ToString()</td>
-            <td>@item.dateTo.ToString()</td>
-            <td>@Html.ActionLink("JOIN", "Details", "Home", new {id=counter}, null)</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Location</td>
+            <td>@item.DateFrom.ToString()</td>
+            <td>@item.DateTo.ToString()</td>
+            <td>@Html.ActionLink("JOIN", "Details", "Events", new {id=counter}, null)</td>
         </tr>
 	}    
 }

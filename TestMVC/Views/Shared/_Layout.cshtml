@@ -5,15 +5,15 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css" />
-    <link href="../../content/style.css" rel="stylesheet" />
+    <link href="~/content/style.css" rel="stylesheet" />
 </head>
   
 <body>
     <h2>@ViewBag.Title</h2>
     <nav>
         <ul class="menu">
-            <li><a href="/home/index">HOME</a></li>
-            <li><a href="/home/list">EVENTS</a></li>
+            <li>@Html.RouteLink("HOME", "Home")</li>
+            <li>@Html.RouteLink("EVENTS", "Events")</li>
         </ul>
     </nav>
     @RenderBody()

@@ -57,11 +57,11 @@ namespace TestMVC.Models
         
     }
     
-    public class ListModel
+    public class EventDataProvider
     {
-        private List<Event> Data = new List<Event>();
+        public List<Event> Data = new List<Event>();
         
-        public ListModel()
+        public EventDataProvider()
         {
             Data.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
             Data.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
@@ -74,7 +74,6 @@ namespace TestMVC.Models
         }
         public Event GetByID(int id)
         {
-            if (id < 1 || id > Data.Count) throw new IndexOutOfRangeException();
             return Data.ElementAt(id-1);
         }
     }
