@@ -8,88 +8,74 @@ namespace TestMVC.Models
 {
     public class Event
     {
-        string _title;
-        string _description;
-        string _location;
-        string _details;
-        DateTime _dateFrom;
-        DateTime _dateTo;
-
         [Display(Name = "Event")]
-        public string title { 
-            get
-            {
-                return _title;
-            }
+        public string Title
+        {
+            get;
+            private set;
         }
         [Display(Name = "Description")]
-        public string description { 
-            get
-            {
-                return _description;
-            } 
+        public string Description
+        {
+            get;
+            private set;
         }
         [Display(Name = "Details")]
-        public string details
+        public string Details
         {
-            get
-            {
-                return _details;
-            }
+            get;
+            private set;
         }
         [Display(Name = "Location")]
-        public string location {
-            get
-            {
-                return _location;
-            }
+        public string Location
+        {
+            get;
+            private set;
         }
         [Display(Name = "Start from")]
-        public DateTime dateFrom { 
-            get
-            {
-                return _dateFrom;
-            }
+        public DateTime DateFrom
+        {
+            get;
+            private set;
         }
         [Display(Name = "End event")]
-        public DateTime dateTo { 
-            get 
-            {
-                return _dateTo;
-            }
+        public DateTime DateTo
+        {
+            get;
+            private set;
         }
         
         public Event(string title, string description, string details , string location,
-                    DateTime dateFrom, DateTime dateTo) {
-            _title = title;
-            _description = description;
-            _location = location;
-            _dateFrom = dateFrom;
-            _dateTo = dateTo;
-            _details = details;
-        }
-        public Event(string title, string description, string details, string location)
-        {
-            _title = title;
-            _description = description;
-            _location = location;
-            _dateFrom = DateTime.Now;
-            _dateTo = new DateTime(3000, 1, 1);
-            _details = details;
+                    DateTime dateFrom = new DateTime(), DateTime dateTo = new DateTime()) {
+            Title = title;
+            Description = description;
+            Location = location;
+            DateFrom = dateFrom;
+            DateTo = dateTo.AddDays(1);
+            Details = details;
         }
         
     }
     
     public class ListModel
     {
-        static List<Event> tmp = new List<Event>();
+        private List<Event> Data = new List<Event>();
         
-        public static List<Event> getEventList(){
-            return tmp;
-        }
-        public static Event getByID(int id)
+        public ListModel()
         {
-            return tmp.ElementAt(id-1);
+            Data.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
+            Data.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
+            Data.Add(new Event("курсач", "сдать курсач", "рили надо сдать", "универ"));
+            Data.Add(new Event("тест", "тесттест", "тесттесттест", "место"));
+            Data.Add(new Event("1", "2", "3", "4"));
+        }
+        public List<Event> GetEventList(){
+            return Data;
+        }
+        public Event GetByID(int id)
+        {
+            if (id < 1 || id > Data.Count) throw new IndexOutOfRangeException();
+            return Data.ElementAt(id-1);
         }
     }
 }
