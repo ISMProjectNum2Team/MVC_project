@@ -20,10 +20,11 @@ namespace TestMVC.Controllers
         public ActionResult Details(string id)
         {
             var model = new EventDataProvider();
-            //if (id < 1 || id > model.Data.Count) {
-            //    return HttpNotFound();
-            //}
-            return View(model.GetByID(id));
+            var result = model.GetByID(id);
+            if (result == null) {
+                return HttpNotFound();
+            }
+            return View(result);
         }
     }
 }

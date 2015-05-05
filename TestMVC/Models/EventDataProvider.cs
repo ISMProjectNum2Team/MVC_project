@@ -83,7 +83,7 @@ namespace TestMVC.Models
         }
         public Event GetByID(string id)
         {
-            return Data.FirstOrDefault(e => e.ID == id);
+            return Data.Find(e => e.ID == id);
         }
     }
 }
