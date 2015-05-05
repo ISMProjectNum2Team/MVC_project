@@ -8,6 +8,11 @@ namespace TestMVC.Models
 {
     public class Event
     {
+        public string ID
+        {
+            get;
+            private set;
+        }
         [Display(Name = "Event")]
         public string Title
         {
@@ -47,6 +52,7 @@ namespace TestMVC.Models
         
         public Event(string title, string description, string details , string location,
                     DateTime dateFrom = new DateTime(), DateTime dateTo = new DateTime()) {
+            ID = Guid.NewGuid().ToString();
             Title = title;
             Description = description;
             Location = location;
@@ -59,7 +65,7 @@ namespace TestMVC.Models
     
     public class EventDataProvider
     {
-        public List<Event> Data = new List<Event>();
+        public static List<Event> Data = new List<Event>();
         
         public EventDataProvider()
         {
@@ -72,9 +78,14 @@ namespace TestMVC.Models
         public List<Event> GetEventList(){
             return Data;
         }
-        public Event GetByID(int id)
+        public Event GetByID(string id)
         {
-            return Data.ElementAt(id-1);
+            return Data.FirstOrDefault(
+                delegate(Event e)
+                {
+                    return e.ID == id;
+                }
+            );
         }
     }
 }
