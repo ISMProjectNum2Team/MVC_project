@@ -17,12 +17,12 @@ namespace TestMVC.Controllers
             return View(model.GetEventList());
         }
         [HttpGet]
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             var model = new EventDataProvider();
-            if (id < 1 || id > model.Data.Count) {
-                return HttpNotFound();
-            }
+            //if (id < 1 || id > model.Data.Count) {
+            //    return HttpNotFound();
+            //}
             return View(model.GetByID(id));
         }
     }

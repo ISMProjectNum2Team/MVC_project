@@ -18,13 +18,14 @@
     var counter = 0;
     foreach (var item in Model)
 	{
+        counter++;
         <tr>
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>@item.Location</td>
             <td>@item.DateFrom.ToString()</td>
             <td>@item.DateTo.ToString()</td>
-            <td>@Html.ActionLink("JOIN", "Details", "Events", new {id=item.ID}, null)</td>
+            <td>@Html.ActionLink("JOIN", "Details", "Events", new {id=counter}, null)</td>
         </tr>
 	}    
 }
