@@ -69,23 +69,21 @@ namespace TestMVC.Models
         
         public EventDataProvider()
         {
-            Data.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
-            Data.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
-            Data.Add(new Event("курсач", "сдать курсач", "рили надо сдать", "универ"));
-            Data.Add(new Event("тест", "тесттест", "тесттесттест", "место"));
-            Data.Add(new Event("1", "2", "3", "4"));
+            if (!(Data.Count > 0))
+            {
+                Data.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
+                Data.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
+                Data.Add(new Event("курсач", "сдать курсач", "рили надо сдать", "универ"));
+                Data.Add(new Event("тест", "тесттест", "тесттесттест", "место"));
+                Data.Add(new Event("1", "2", "3", "4"));
+            }
         }
         public List<Event> GetEventList(){
             return Data;
         }
         public Event GetByID(string id)
         {
-            return Data.FirstOrDefault(
-                delegate(Event e)
-                {
-                    return e.ID == id;
-                }
-            );
+            return Data.FirstOrDefault(e => e.ID == id);
         }
     }
 }
