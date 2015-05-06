@@ -51,7 +51,8 @@ namespace TestMVC.Models
         }
         
         public Event(string title, string description, string details , string location,
-                    DateTime dateFrom = new DateTime(), DateTime dateTo = new DateTime()) {
+                    DateTime dateFrom = new DateTime(), DateTime dateTo = new DateTime())
+        {
             ID = Guid.NewGuid().ToString();
             Title = title;
             Description = description;
