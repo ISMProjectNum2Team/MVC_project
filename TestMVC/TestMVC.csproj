@@ -109,7 +109,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EventDataProvider.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Support\EventDataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
