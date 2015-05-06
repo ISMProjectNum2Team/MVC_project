@@ -57,7 +57,7 @@ namespace TestMVC.Models
             Description = description;
             Location = location;
             DateFrom = dateFrom;
-            DateTo = dateTo.AddDays(1);
+            DateTo = dateTo;
             Details = details;
         }
         
@@ -65,21 +65,19 @@ namespace TestMVC.Models
     
     public class EventDataProvider
     {
-        public static List<Event> Data = new List<Event>();
-        
-        public EventDataProvider()
+        public static List<Event> Data = new List<Event>() 
         {
-            if (!(Data.Count > 0))
-            {
-                Data.Add(new Event("first", "simple event", "details and other stuff", "location of event"));
-                Data.Add(new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"));
-                Data.Add(new Event("курсач", "сдать курсач", "рили надо сдать", "универ"));
-                Data.Add(new Event("тест", "тесттест", "тесттесттест", "место"));
-                Data.Add(new Event("1", "2", "3", "4"));
-            }
-        }
-        public List<Event> GetEventList(){
-            return Data;
+                new Event("first", "simple event", "details and other stuff", "location of event"),
+                new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
+                new Event("курсач", "сдать курсач", "рили надо сдать", "универ"),
+                new Event("тест", "тесттест", "тесттесттест", "место"),
+                new Event("1", "2", "3", "4")
+        };
+
+        public EventDataProvider() { }
+        public List<Event> GetEventList()
+        { 
+            return Data; 
         }
         public Event GetByID(string id)
         {
