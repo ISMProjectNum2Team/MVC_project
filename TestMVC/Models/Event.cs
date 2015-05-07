@@ -37,20 +37,20 @@ namespace TestMVC.Models
             private set;
         }
 
-        public DateTime DateFrom
+        public DateTime? DateFrom
         {
             get;
             private set;
         }
 
-        public DateTime DateTo
+        public DateTime? DateTo
         {
             get;
             private set;
         }
 
         public Event(string title, string description, string details, string location,
-                    DateTime dateFrom = new DateTime(), DateTime dateTo = new DateTime())
+                    DateTime? dateFrom = null, DateTime? dateTo = null)
         {
             ID = Guid.NewGuid().ToString();
             Title = title;

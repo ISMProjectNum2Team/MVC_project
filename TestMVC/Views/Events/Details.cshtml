@@ -7,8 +7,16 @@
 
 <div class="jumbotron">
   <h1>@Model.Title</h1>
-    <h2>Starts at @Model.DateFrom</h2>
-    <h2>Ends at @Model.DateTo</h2>
+    @{
+        if (Model.DateFrom != null)
+        {
+            <p class="lead">Starts at @Model.DateFrom</p>
+        }
+        if (Model.DateTo != null)
+        {
+            <p class="lead">Ends at @Model.DateTo</p>
+        }
+}
     <p>Location: @Model.Location</p>
     <p>@Model.Description</p>
     <p>@Model.Details</p>    

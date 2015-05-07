@@ -15,4 +15,8 @@ table,th{
     text-align: center;
     margin: 0 auto;
     width: 70%;
+    padding: 15px;
+}
+.jumbotron .lead {
+    font-weight: 400;
 }

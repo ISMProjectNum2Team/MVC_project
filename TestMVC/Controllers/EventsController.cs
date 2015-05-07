@@ -22,7 +22,7 @@ namespace TestMVC.Controllers
             var model = new EventDataProvider();
             var result = model.GetByID(id);
             if (result == null) {
-                return HttpNotFound();
+                return RedirectToRoute("Error.NotFound");
             }
             return View(result);
         }

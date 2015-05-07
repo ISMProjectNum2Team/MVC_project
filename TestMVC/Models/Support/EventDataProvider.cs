@@ -14,7 +14,7 @@ namespace TestMVC.Models
                 new Event("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
                 new Event("курсач", "сдать курсач", "рили надо сдать", "универ"),
                 new Event("тест", "тесттест", "тесттесттест", "место"),
-                new Event("1", "2", "3", "4")
+                new Event("International 2015 qual's", "Largest DOTA 2 event starts", "Valve announced that the TI5 qualifiers will be take place during the last week of May, two weeks before the original date they released last week. The change creates a large time window until June 13th, allowing any participants of the qualifiers to join DreamHack Summer as well.", "Seatle", new DateTime(2015, 8, 3), new DateTime(2015, 8, 8))
         };
 
         public EventDataProvider() { }

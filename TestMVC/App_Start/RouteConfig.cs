@@ -14,18 +14,23 @@ namespace TestMVC
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Home",
-                url: "Home",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
             );
             routes.MapRoute(
                 name: "Events",
-                url: "Events",
+                url: "Events/{action}/{id}",
                 defaults: new { controller = "Events", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+               name: "Error.NotFound",
+               url: "not-found",
+               defaults: new { controller = "Error", action = "NotFound" }
+           );
+            routes.MapRoute(
+                name: "Error-404",
+                url: "{*url}",
+                defaults: new { controller = "Error", action = "NotFound"}
             );
         }
     }
