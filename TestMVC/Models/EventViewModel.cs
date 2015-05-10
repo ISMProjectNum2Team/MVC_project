@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TestMVC.Models
 {
-    public class Event
+    public class EventViewModel
     {
         public string ID
         {
@@ -49,7 +49,7 @@ namespace TestMVC.Models
             private set;
         }
 
-        public Event(string title, string description, string details, string location,
+        public EventViewModel(string title, string description, string details, string location,
                     DateTime? dateFrom = null, DateTime? dateTo = null)
         {
             ID = Guid.NewGuid().ToString();

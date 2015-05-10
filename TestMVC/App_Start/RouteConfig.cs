@@ -12,6 +12,7 @@ namespace TestMVC
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
             routes.MapRoute(
                 name: "Home",
                 url: "",
@@ -19,8 +20,13 @@ namespace TestMVC
             );
             routes.MapRoute(
                 name: "Events",
-                url: "Events/{action}/{id}",
-                defaults: new { controller = "Events", action = "Index", id = UrlParameter.Optional }
+                url: "Events",
+                defaults: new { controller = "Events", action = "Index" }
+            );
+            routes.MapRoute(
+                name: "Details",
+                url: "{controller}/Details/{id}",
+                defaults: new { conroller = "Events", action = "Details", id = UrlParameter.Optional }
             );
             routes.MapRoute(
                name: "Error.NotFound",
