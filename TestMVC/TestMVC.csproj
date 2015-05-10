@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>..\NHibernate-4.0.3.GA-bin\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -118,6 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Data\EventsSource.mdf" />
+    <Content Include="App_Data\EventsSource_log.ldf">
+      <DependentUpon>EventsSource.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -130,7 +137,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="Views\Events\AddEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -149,6 +156,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Error\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{9ca50b80-ef7b-4fab-998a-cf559e16e77c}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NHibernateDataProvider\NHibernateDataProvider.csproj">
+      <Project>{db21a90c-dbd5-4738-b656-ef130c4aa77c}</Project>
+      <Name>NHibernateDataProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "AddEvent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddEvent</h2>
+
+@using (Html.BeginForm("AddEvent", "Events", FormMethod.Post))
+{
+     <section class="form-element">
+        <p>Enter name</p>
+        <input type="text" name="Title" />
+    </section>
+    <section class="form-element">
+        <p>Enter short description</p>
+        <input type="text" name="Description" />
+    </section>
+    <section class="form-element">
+        <p>Enter details</p>
+        <input type="text" name="Details" />
+    </section>
+    <section class="form-element">
+        <p>Enter location :</p>
+        <input type="text" name="Location" />
+    </section>
+    <section>
+        <p>Date from</p>
+        <input type="date" name="DateFrom" />
+    </section>
+    <section>
+        <p>Date to</p>
+        <input type="date" name="DateTo" />
+    </section>
+    <section class="form-element">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </section>
+}

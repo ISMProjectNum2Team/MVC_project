@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using NHibernateDataProvider;
+using NHibernate;
+using NHibernate.Cfg;
+using Business;
 
 namespace TestMVC.Models
 { 
     public class EventDataProvider
     {
-        public static List<EventViewModel> Data = new List<EventViewModel>() 
+        /*public static List<EventViewModel> Data = new List<EventViewModel>() 
         {
                 new EventViewModel("first", "simple event", "details and other stuff", "location of event"),
                 new EventViewModel("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
@@ -25,6 +29,6 @@ namespace TestMVC.Models
         public EventViewModel GetByID(string id)
         {
             return Data.Find(e => e.ID == id);
-        }
+        }*/
     }
 }

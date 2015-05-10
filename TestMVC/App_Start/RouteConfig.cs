@@ -24,6 +24,11 @@ namespace TestMVC
                 defaults: new { controller = "Events", action = "Index" }
             );
             routes.MapRoute(
+                name: "addEvent",
+                url: "Events/AddEvent",
+                defaults: new { controller = "Events", action = "AddEvent" }
+            );
+            routes.MapRoute(
                 name: "Details",
                 url: "{controller}/Details/{id}",
                 defaults: new { conroller = "Events", action = "Details", id = UrlParameter.Optional }

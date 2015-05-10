@@ -131,3 +131,13 @@ C:\Users\Cheese\Documents\GitHub\MVC_project\TestMVC\bin\ru\System.Web.WebPages.
 C:\Users\Cheese\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.csprojResolveAssemblyReference.cache
 C:\Users\Cheese\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.dll
 C:\Users\Cheese\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.pdb
+D:\Документы\ISM\MVC_project\TestMVC\bin\hibernate.cfg.xml
+D:\Документы\ISM\MVC_project\TestMVC\bin\Business.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\NHibernate.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\NHibernateDataProvider.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\Iesi.Collections.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\Business.pdb
+D:\Документы\ISM\MVC_project\TestMVC\bin\NHibernateDataProvider.pdb
+D:\Документы\ISM\MVC_project\TestMVC\bin\NHibernate.pdb
+D:\Документы\ISM\MVC_project\TestMVC\bin\NHibernate.xml
+D:\Документы\ISM\MVC_project\TestMVC\bin\Iesi.Collections.xml
