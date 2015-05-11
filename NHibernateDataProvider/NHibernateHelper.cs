@@ -22,11 +22,11 @@ namespace NHibernateDataProvider
             {
                 if (sessionFactory == null)
                 {
-                    var cnfg = new Configuration();
-                    cnfg.Configure();
-                    cnfg.AddAssembly(typeof(Event).Assembly);
-                    sessionFactory = cnfg.BuildSessionFactory();
-                    //new SchemaExport(cnfg).Execute(true, true, false);
+                    var configuration = new Configuration();
+                    configuration.Configure();
+                    configuration.AddAssembly(typeof(Event).Assembly);
+                    sessionFactory = configuration.BuildSessionFactory();
+                    //new SchemaExport(configuration).Execute(true, true, false);
                 }
                 return sessionFactory;
             }
