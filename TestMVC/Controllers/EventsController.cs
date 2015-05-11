@@ -14,11 +14,11 @@ namespace TestMVC.Controllers
     {
         //
         // GET: /Main/
-        private DataProvider Data = new DataProvider();      
+        private DataProvider data = new DataProvider();      
 
         public ActionResult Index()
         {
-            var result = Data.GetAllEvents();
+            var result = data.GetAllEvents();
             AutoMapper.Mapper.CreateMap<Event, EventViewModel>();
             var model = result.Select(x => Mapper.Map<EventViewModel>(x));
             return View(model);
@@ -26,7 +26,7 @@ namespace TestMVC.Controllers
         [HttpGet]
         public ActionResult Details(string id)
         {
-            var result = Data.GetByID(id);
+            var result = data.GetById(id);
             if (result == null) {
                 return RedirectToRoute("Error.NotFound");
             }
@@ -44,7 +44,7 @@ namespace TestMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                Data.AddEvent(ev);
+                data.AddEvent(ev);
             }
             return RedirectToAction("Index", "Events");
         }

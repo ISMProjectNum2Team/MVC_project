@@ -8,7 +8,7 @@ namespace Business
 {
     public class Event
     {
-        public virtual string ID { get;set; }
+        public virtual string Id { get;set; }
         public virtual string Title { get;set; }
         public virtual string Description { get;set; }
         public virtual string Details { get;set; }
@@ -18,7 +18,7 @@ namespace Business
 
         public Event()
         {
-            ID = Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
         }
     }
 }

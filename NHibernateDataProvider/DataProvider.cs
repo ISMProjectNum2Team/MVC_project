@@ -12,22 +12,22 @@ namespace NHibernateDataProvider
     {
         public IList<Event> GetAllEvents()
         {
-            IList<Event> Events;
+            IList<Event> events;
             using (ISession session = NHibernateHelper.OpenSession())
             {
                 IQuery query = session.CreateQuery("from Event");
-                Events = query.List<Event>();
+                events = query.List<Event>();
             }
-            return Events;
+            return events;
         }
 
-        public Event GetByID(string id)
+        public Event GetById(string id)
         {
-            Event Event = new Event();
+            Event ev = new Event();
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                Event = session.Get<Event>(id);
-                return Event;
+                ev = session.Get<Event>(id);
+                return ev;
             }
         }
 
@@ -45,7 +45,7 @@ namespace NHibernateDataProvider
 
         public void DeleteEvent(string id)
         {
-            Event ev = GetByID(id);
+            Event ev = GetById(id);
             if (ev != null) 
             {
                 using (ISession session = NHibernateHelper.OpenSession())

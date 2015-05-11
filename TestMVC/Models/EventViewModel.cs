@@ -7,7 +7,7 @@ namespace TestMVC.Models
 {
     public class EventViewModel
     {
-        public string ID
+        public string Id
         {
             get;
             set;
@@ -58,7 +58,7 @@ namespace TestMVC.Models
         public EventViewModel(string title, string description, string details, string location,
                     DateTime? dateFrom = null, DateTime? dateTo = null)
         {
-            ID = Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
             Title = title;
             Description = description;
             Location = location;

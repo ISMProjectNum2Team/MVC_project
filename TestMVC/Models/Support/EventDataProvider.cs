@@ -12,7 +12,7 @@ namespace TestMVC.Models
 { 
     public class EventDataProvider
     {
-        public static List<EventViewModel> Data = new List<EventViewModel>() 
+        public static List<EventViewModel> data = new List<EventViewModel>() 
         {
                 new EventViewModel("first", "simple event", "details and other stuff", "location of event"),
                 new EventViewModel("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
@@ -24,11 +24,11 @@ namespace TestMVC.Models
         public EventDataProvider() { }
         public List<EventViewModel> GetEventList()
         { 
-            return Data; 
+            return data; 
         }
-        public EventViewModel GetByID(string id)
+        public EventViewModel GetById(string id)
         {
-            return Data.Find(e => e.ID == id);
+            return data.Find(e => e.Id == id);
         }
     }
 }
