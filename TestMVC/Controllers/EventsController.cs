@@ -42,7 +42,10 @@ namespace TestMVC.Controllers
         [HttpPost]
         public ActionResult AddEvent(Event ev)
         {
-            Data.AddEvent(ev);
+            if (ModelState.IsValid)
+            {
+                Data.AddEvent(ev);
+            }
             return RedirectToAction("Index", "Events");
         }
     }

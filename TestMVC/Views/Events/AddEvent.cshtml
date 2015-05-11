@@ -7,31 +7,35 @@
 @using (Html.BeginForm("AddEvent", "Events", FormMethod.Post))
 {
     <h2>AddEvent</h2>
-     <section class="form-element">
+     <div class="editor-field">
          <p>Enter name</p>
-         @Html.TextBoxFor(model => model.Title)
-    </section>
-    <section class="form-element">
+         @Html.EditorFor(model => model.Title)
+         @Html.ValidationMessageFor(model => model.Title)
+    </div>
+    <div class="editor-field">
         <p>Enter short description</p>
-        @Html.TextBoxFor(model => model.Description)
-    </section>
-    <section class="form-element">
+        @Html.EditorFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+    <div class="editor-field">
         <p>Enter details</p>
-        @Html.TextBoxFor(model => model.Details)
-    </section>
-    <section class="form-element">
+        @Html.EditorFor(model => model.Details)
+        @Html.ValidationMessageFor(model => model.Details)
+    </div>
+    <div class="editor-field">
         <p>Enter location :</p>
-        @Html.TextBoxFor(model => model.Location)
-    </section>
-    <section>
+        @Html.EditorFor(model => model.Location)
+        @Html.ValidationMessageFor(model => model.Location)
+    </div>
+    <div>
         <p>Date from</p>
         <input type="date" name="DateFrom" placeholder="dd.mm.yyyy"/>
-    </section>
-    <section>
+    </div>
+    <div>
         <p>Date to</p>
         <input type="date" name="DateTo" placeholder="dd.mm.yyyy"/>
-    </section>
-    <section class="form-element">
+    </div>
+    <div class="form-element">
         <input type="submit" value="Отправить" class="btn btn-default" />
-    </section>
+    </div>
 }
