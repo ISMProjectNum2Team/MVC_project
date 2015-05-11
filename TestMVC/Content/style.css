@@ -20,3 +20,7 @@ table,th{
 .jumbotron .lead {
     font-weight: 400;
 }
+form {
+    width: 40%;
+    margin: 0 auto;
+}

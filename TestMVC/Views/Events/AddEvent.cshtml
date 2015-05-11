@@ -1,35 +1,35 @@
-﻿@{
+﻿@model TestMVC.Models.EventViewModel
+@{
     ViewBag.Title = "AddEvent";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>AddEvent</h2>
-
 @using (Html.BeginForm("AddEvent", "Events", FormMethod.Post))
 {
+    <h2>AddEvent</h2>
      <section class="form-element">
-        <p>Enter name</p>
-        <input type="text" name="Title" />
+         <p>Enter name</p>
+         @Html.TextBoxFor(model => model.Title)
     </section>
     <section class="form-element">
         <p>Enter short description</p>
-        <input type="text" name="Description" />
+        @Html.TextBoxFor(model => model.Description)
     </section>
     <section class="form-element">
         <p>Enter details</p>
-        <input type="text" name="Details" />
+        @Html.TextBoxFor(model => model.Details)
     </section>
     <section class="form-element">
         <p>Enter location :</p>
-        <input type="text" name="Location" />
+        @Html.TextBoxFor(model => model.Location)
     </section>
     <section>
         <p>Date from</p>
-        <input type="date" name="DateFrom" />
+        <input type="date" name="DateFrom" placeholder="dd.mm.yyyy"/>
     </section>
     <section>
         <p>Date to</p>
-        <input type="date" name="DateTo" />
+        <input type="date" name="DateTo" placeholder="dd.mm.yyyy"/>
     </section>
     <section class="form-element">
         <input type="submit" value="Отправить" class="btn btn-default" />

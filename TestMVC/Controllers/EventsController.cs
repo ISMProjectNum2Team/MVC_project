@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using TestMVC.Models;
 using NHibernateDataProvider;
 using Business;
+using AutoMapper;
 
 namespace TestMVC.Controllers
 {
@@ -13,25 +14,24 @@ namespace TestMVC.Controllers
     {
         //
         // GET: /Main/
-        private DataProvider Data = new DataProvider();
+        private DataProvider Data = new DataProvider();      
 
         public ActionResult Index()
         {
-            //var result = Data.GetAllEvents();
-            //return View(result);
-            return View();
-            //var model = new EventDataProvider();
-            //return View(model.GetEventList());
+            var result = Data.GetAllEvents();
+            AutoMapper.Mapper.CreateMap<Event, EventViewModel>();
+            var model = result.Select(x => Mapper.Map<EventViewModel>(x));
+            return View(model);
         }
         [HttpGet]
         public ActionResult Details(string id)
         {
-            //var model = new EventDataProvider();
             var result = Data.GetByID(id);
             if (result == null) {
                 return RedirectToRoute("Error.NotFound");
             }
-            return View(result);
+            var model = Mapper.Map<Event, EventViewModel>(result);
+            return View(model);
         }
 
         public ActionResult AddEvent()
@@ -40,10 +40,10 @@ namespace TestMVC.Controllers
         }
 
         [HttpPost]
-        public void AddEvent(Event ev)
+        public ActionResult AddEvent(Event ev)
         {
             Data.AddEvent(ev);
-            RedirectToAction("Index");
+            return RedirectToAction("Index", "Events");
         }
     }
 }

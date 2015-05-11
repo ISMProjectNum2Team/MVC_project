@@ -8,46 +8,17 @@ namespace Business
 {
     public class Event
     {
-        public virtual string ID
-        {
-            get;
-            private set;
-        }
+        public virtual string ID { get;set; }
+        public virtual string Title { get;set; }
+        public virtual string Description { get;set; }
+        public virtual string Details { get;set; }
+        public virtual string Location { get;set; }
+        public virtual DateTime? DateFrom { get;set; }
+        public virtual DateTime? DateTo { get; set; }
 
-        public virtual string Title
+        public Event()
         {
-            get;
-            private set;
-        }
-
-        public virtual string Description
-        {
-            get;
-            private set;
-        }
-
-        public virtual string Details
-        {
-            get;
-            private set;
-        }
-
-        public virtual string Location
-        {
-            get;
-            private set;
-        }
-
-        public virtual DateTime? DateFrom
-        {
-            get;
-            private set;
-        }
-
-        public virtual DateTime? DateTo
-        {
-            get;
-            private set;
+            ID = Guid.NewGuid().ToString();
         }
     }
 }

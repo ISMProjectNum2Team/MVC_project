@@ -15,7 +15,7 @@ namespace NHibernateDataProvider
             IList<Event> Events;
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                IQuery query = session.CreateQuery("from Events");
+                IQuery query = session.CreateQuery("from Event");
                 Events = query.List<Event>();
             }
             return Events;
@@ -41,6 +41,22 @@ namespace NHibernateDataProvider
                     transaction.Commit();
                 }
             }        
+        }
+
+        public void DeleteEvent(string id)
+        {
+            Event ev = GetByID(id);
+            if (ev != null) 
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    using (ITransaction transaction = session.BeginTransaction())
+                    {
+                        session.Delete(ev);
+                        transaction.Commit();
+                    }
+                }
+            }      
         }
     }
 }
