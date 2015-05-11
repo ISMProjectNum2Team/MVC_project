@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations;
 namespace TestMVC.Models
 {
     public class EventViewModel
@@ -10,43 +10,49 @@ namespace TestMVC.Models
         public string ID
         {
             get;
-            private set;
+            set;
         }
-        
+
+        [Required]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "The string length must be between 3 and 50 characters")]
         public string Title
         {
             get;
-            private set;
+            set;
         }
 
+        [Required]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "The string length must be between 3 and 50 characters")]
         public string Description
         {
             get;
-            private set;
+            set;
         }
 
         public string Details
         {
             get;
-            private set;
+            set;
         }
 
+        [Required]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "The string length must be between 3 and 50 characters")]
         public string Location
         {
             get;
-            private set;
+            set;
         }
 
         public DateTime? DateFrom
         {
             get;
-            private set;
+            set;
         }
 
         public DateTime? DateTo
         {
             get;
-            private set;
+            set;
         }
 
         public EventViewModel(string title, string description, string details, string location,
