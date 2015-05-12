@@ -7,6 +7,19 @@ using System.Web.Routing;
 
 namespace TestMVC
 {
+    public static class RouteCollectionExtensions
+    {
+        public static Route MapRouteWithName(this RouteCollection routes,
+            string name, string url, object defaults, object constraints)
+        {
+            Route route = routes.MapRoute(name, url, defaults, constraints);
+            route.DataTokens = new RouteValueDictionary();
+            route.DataTokens.Add("RouteName", name);
+
+            return route;
+        }
+    }
+
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)

@@ -14,11 +14,11 @@ namespace TestMVC.Models
     {
         public static List<EventViewModel> data = new List<EventViewModel>() 
         {
-                new EventViewModel("first", "simple event", "details and other stuff", "location of event"),
-                new EventViewModel("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
-                new EventViewModel("курсач", "сдать курсач", "рили надо сдать", "универ"),
-                new EventViewModel("тест", "тесттест", "тесттесттест", "место"),
-                new EventViewModel("International 2015 qual's", "Largest DOTA 2 event starts", "Valve announced that the TI5 qualifiers will be take place during the last week of May, two weeks before the original date they released last week. The change creates a large time window until June 13th, allowing any participants of the qualifiers to join DreamHack Summer as well.", "Seatle", new DateTime(2015, 8, 3), new DateTime(2015, 8, 8))
+                //new EventViewModel("first", "simple event", "details and other stuff", "location of event"),
+                //new EventViewModel("митинг", "показать проект", "встречаемся и показываем какой у нас шикарный проект", "ИСМ"),
+                //new EventViewModel("курсач", "сдать курсач", "рили надо сдать", "универ"),
+                //new EventViewModel("тест", "тесттест", "тесттесттест", "место"),
+                //new EventViewModel("International 2015 qual's", "Largest DOTA 2 event starts", "Valve announced that the TI5 qualifiers will be take place during the last week of May, two weeks before the original date they released last week. The change creates a large time window until June 13th, allowing any participants of the qualifiers to join DreamHack Summer as well.", "Seatle", new DateTime(2015, 8, 3), new DateTime(2015, 8, 8))
         };
 
         public EventDataProvider() { }
