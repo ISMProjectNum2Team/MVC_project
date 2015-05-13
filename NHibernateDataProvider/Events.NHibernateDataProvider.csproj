@@ -60,18 +60,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="hibernate.cfg.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Mapping\Event.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
+    <ProjectReference Include="..\Business\Events.Business.csproj">
       <Project>{9ca50b80-ef7b-4fab-998a-cf559e16e77c}</Project>
-      <Name>Business</Name>
+      <Name>Events.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

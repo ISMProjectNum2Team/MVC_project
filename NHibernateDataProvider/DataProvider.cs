@@ -23,10 +23,9 @@ namespace NHibernateDataProvider
 
         public Event GetById(string id)
         {
-            Event ev = new Event();
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                ev = session.Get<Event>(id);
+                Event ev = session.Get<Event>(id);
                 return ev;
             }
         }

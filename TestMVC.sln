@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMVC", "TestMVC\TestMVC.csproj", "{05D85D84-C541-4CAC-9F52-116A9E502D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateDataProvider", "NHibernateDataProvider\NHibernateDataProvider.csproj", "{DB21A90C-DBD5-4738-B656-EF130C4AA77C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.NHibernateDataProvider", "NHibernateDataProvider\Events.NHibernateDataProvider.csproj", "{DB21A90C-DBD5-4738-B656-EF130C4AA77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{9CA50B80-EF7B-4FAB-998A-CF559E16E77C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Business", "Business\Events.Business.csproj", "{9CA50B80-EF7B-4FAB-998A-CF559E16E77C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

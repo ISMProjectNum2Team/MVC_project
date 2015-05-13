@@ -26,8 +26,7 @@ namespace NHibernateDataProvider
                     configuration.Configure();
                     configuration.AddAssembly(typeof(Event).Assembly);
                     sessionFactory = configuration.BuildSessionFactory();
-                    //new SchemaExport(configuration).Execute(true, true, false); // создает таблицу в БД (нужно закомментировать
-                                                                                  // строку над ней)
+                    //new SchemaExport(configuration).Execute(true, true, false);
                 }
                 return sessionFactory;
             }

@@ -19,7 +19,6 @@ namespace TestMVC.Controllers
         public ActionResult Index()
         {
             var result = data.GetAllEvents();
-            AutoMapper.Mapper.CreateMap<Event, EventViewModel>();
             var model = result.Select(x => Mapper.Map<EventViewModel>(x));
             return View(model);
         }
@@ -44,7 +43,8 @@ namespace TestMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-               // data.AddEvent(ev);
+                var newEvent = Mapper.Map<EventViewModel, Event>(ev);
+                data.AddEvent(newEvent);
             }
             return RedirectToAction("Index", "Events");
         }
