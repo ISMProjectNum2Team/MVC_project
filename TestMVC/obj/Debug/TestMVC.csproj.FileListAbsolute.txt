@@ -193,3 +193,14 @@ C:\Users\John\Documents\GitHub\MVC_project\TestMVC\bin\ru\System.Web.WebPages.Ra
 C:\Users\John\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.csprojResolveAssemblyReference.cache
 C:\Users\John\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.dll
 C:\Users\John\Documents\GitHub\MVC_project\TestMVC\obj\Debug\TestMVC.pdb
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\AutoMapper.Net4.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\AutoMapper.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Business.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernate.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernateDataProvider.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Iesi.Collections.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Business.pdb
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernateDataProvider.pdb
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\AutoMapper.xml
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernate.xml
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Iesi.Collections.xml
