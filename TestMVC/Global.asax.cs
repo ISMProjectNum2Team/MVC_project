@@ -19,6 +19,7 @@ namespace TestMVC
             AreaRegistration.RegisterAllAreas();
 
             AutoMapper.Mapper.CreateMap<Event, EventViewModel>();
+            AutoMapper.Mapper.CreateMap<EventViewModel, Event>();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
