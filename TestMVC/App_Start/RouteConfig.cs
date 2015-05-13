@@ -10,9 +10,9 @@ namespace TestMVC
     public static class RouteCollectionExtensions
     {
         public static Route MapRouteWithName(this RouteCollection routes,
-            string name, string url, object defaults, object constraints)
+            string name, string url, object defaults)
         {
-            Route route = routes.MapRoute(name, url, defaults, constraints);
+            Route route = routes.MapRoute(name, url, defaults);
             route.DataTokens = new RouteValueDictionary();
             route.DataTokens.Add("RouteName", name);
 
@@ -26,32 +26,32 @@ namespace TestMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
+            routes.MapRouteWithName(
                 name: "Home",
                 url: "",
                 defaults: new { controller = "Home", action = "Index" }
             );
-            routes.MapRoute(
+            routes.MapRouteWithName(
                 name: "Events",
                 url: "Events",
                 defaults: new { controller = "Events", action = "Index" }
             );
-            routes.MapRoute(
+            routes.MapRouteWithName(
                 name: "AddEvent",
                 url: "Events/AddEvent",
                 defaults: new { controller = "Events", action = "AddEvent" }
             );
-            routes.MapRoute(
+            routes.MapRouteWithName(
                 name: "Details",
                 url: "{controller}/Details/{id}",
                 defaults: new { conroller = "Events", action = "Details", id = UrlParameter.Optional }
             );
-            routes.MapRoute(
+            routes.MapRouteWithName(
                name: "Error.NotFound",
                url: "not-found",
                defaults: new { controller = "Error", action = "NotFound" }
            );
-            routes.MapRoute(
+            routes.MapRouteWithName(
                 name: "Error-404",
                 url: "{*url}",
                 defaults: new { controller = "Error", action = "NotFound"}

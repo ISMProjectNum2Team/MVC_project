@@ -19,9 +19,9 @@
                     <ul class="nav navbar-nav">
                         @{
                             string routeName = ViewContext.RouteData.DataTokens.Values.ElementAt(0).ToString();
-                        <li>@NavigationLink("HOME", "Home", @routeName)</li>
-                        <li>@NavigationLink("ADD EVENT", "AddEvent", @routeName)</li>
-                        <li>@NavigationLink("EVENTS", "Events", @routeName)</li>
+                            @NavigationLink("HOME", "Home", @routeName)
+                            @NavigationLink("ADD EVENT", "AddEvent", @routeName)
+                            @NavigationLink("EVENTS", "Events", @routeName)
                         }
                     </ul>
                 </div>
@@ -40,13 +40,13 @@
 {
     if (string.Equals(routeName, currentRouteName, StringComparison.InvariantCultureIgnoreCase))
     {
-        <li class="item active">
-            <p>@linkName</p>
-        </li>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">@linkName</a>
+        </div>
     }
     else
     {
-        <li class="item">
+        <li>
             @Html.RouteLink(@linkName, routeName)
         </li>
     }
