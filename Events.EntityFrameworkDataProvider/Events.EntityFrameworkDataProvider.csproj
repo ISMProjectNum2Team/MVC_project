@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CA50B80-EF7B-4FAB-998A-CF559E16E77C}</ProjectGuid>
+    <ProjectGuid>{443382CA-8096-4EEA-9F65-771D9C176931}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Business</RootNamespace>
-    <AssemblyName>Business</AssemblyName>
+    <RootNamespace>Events.EntityFrameworkDataProvider</RootNamespace>
+    <AssemblyName>Events.EntityFrameworkDataProvider</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,13 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Event.cs" />
-    <Compile Include="IEntityDataProvider.cs" />
-    <Compile Include="IEventDataProvider.cs" />
+    <Compile Include="EntityFrameworkDataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Event.hbm.xml" />
+    <ProjectReference Include="..\Business\Events.Business.csproj">
+      <Project>{9ca50b80-ef7b-4fab-998a-cf559e16e77c}</Project>
+      <Name>Events.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

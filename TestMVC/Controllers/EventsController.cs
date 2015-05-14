@@ -19,7 +19,7 @@ namespace TestMVC.Controllers
         public ActionResult Index()
         {
             var result = data.GetAllEvents();
-            var model = result.Select(x => Mapper.Map<EventViewModel>(x));
+            var model = Mapper.Map<IList<EventViewModel>>(result);
             return View(model);
         }
         [HttpGet]

@@ -54,11 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="NHibernateEventDataProvider.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Mapping\Event.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Events.Business.csproj">
