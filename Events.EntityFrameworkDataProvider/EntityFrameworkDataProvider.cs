@@ -9,22 +9,22 @@ namespace Events.EntityFrameworkDataProvider
 {
     public class EntityFrameworkDataProvider : IEventDataProvider
     {
-        public IList<Event> GetAll()
+        public IList<Event> GetAllElements()
         {
             throw new NotImplementedException();
         }
 
-        public Event GetById(string id)
+        public Event GetElementById(string id)
         {
             throw new NotImplementedException();
         }
 
-        public void AddT(Event element)
+        public void AddElement(Event element)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteT(string id)
+        public void DeleteElement(string id)
         {
             throw new NotImplementedException();
         }

@@ -7,6 +7,7 @@ using TestMVC.Models;
 using NHibernateDataProvider;
 using Business;
 using AutoMapper;
+using TestMVC.Cache;
 
 namespace TestMVC.Controllers
 {
@@ -23,14 +24,15 @@ namespace TestMVC.Controllers
 
         public ActionResult Index()
         {
-            var result = data.GetAll();
+            var result = data.GetAllElements();
             var model = Mapper.Map<IList<EventViewModel>>(result);
             return View(model);
         }
         [HttpGet]
         public ActionResult Details(string id)
         {
-            var result = data.GetById(id);
+            var result = WebCacheManager.FromCache("Events::" + id, () => { return data.GetElementById(id); });
+                
             if (result == null) {
                 return RedirectToRoute("Error.NotFound");
             }
@@ -49,7 +51,8 @@ namespace TestMVC.Controllers
             if (ModelState.IsValid)
             {
                 var newEvent = Mapper.Map<EventViewModel, Event>(ev);
-                data.AddT(newEvent);
+                data.AddElement(newEvent);
+                WebCacheManager.Clear();
             }
             return RedirectToAction("Index", "Events");
         }

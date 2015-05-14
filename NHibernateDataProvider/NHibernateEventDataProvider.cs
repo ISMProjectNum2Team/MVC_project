@@ -11,7 +11,7 @@ namespace NHibernateDataProvider
     public class NHibernateEventDataProvider : IEventDataProvider
     {
 
-        public Event GetById(string id)
+        public Event GetElementById(string id)
         {
             using (ISession session = NHibernateHelper.OpenSession())
             {
@@ -19,7 +19,7 @@ namespace NHibernateDataProvider
                 return ev;
             }
         }
-        public IList<Event> GetAll()
+        public IList<Event> GetAllElements()
         {
             IList<Event> events;
             using (ISession session = NHibernateHelper.OpenSession())
@@ -30,7 +30,7 @@ namespace NHibernateDataProvider
             return events;
         }
 
-        public void AddT(Event element)
+        public void AddElement(Event element)
         {
             using (ISession session = NHibernateHelper.OpenSession())
             {
@@ -42,9 +42,9 @@ namespace NHibernateDataProvider
             }
         }
 
-        public void DeleteT(string id)
+        public void DeleteElement(string id)
         {
-            Event ev = GetById(id);
+            Event ev = GetElementById(id);
             if (ev != null)
             {
                 using (ISession session = NHibernateHelper.OpenSession())

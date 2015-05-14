@@ -210,3 +210,9 @@ D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.xml
 D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.Integration.Mvc.xml
 D:\Документы\ISM\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.dll
 D:\Документы\ISM\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.pdb
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Autofac.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Autofac.Integration.Mvc.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.dll
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.pdb
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Autofac.xml
+C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Autofac.Integration.Mvc.xml

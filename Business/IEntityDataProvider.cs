@@ -8,12 +8,12 @@ namespace Business
 {
     public interface IEntityDataProvider<T>
     {
-        IList<T> GetAll();
+        IList<T> GetAllElements();
 
-        T GetById(string id);
+        T GetElementById(string id);
 
-        void AddT(T element);
+        void AddElement(T element);
 
-        void DeleteT(string id);
+        void DeleteElement(string id);
     }
 }
