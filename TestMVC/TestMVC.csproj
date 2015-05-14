@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
@@ -114,6 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -176,6 +183,10 @@
     <ProjectReference Include="..\Business\Events.Business.csproj">
       <Project>{9ca50b80-ef7b-4fab-998a-cf559e16e77c}</Project>
       <Name>Events.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Events.EntityFrameworkDataProvider\Events.EntityFrameworkDataProvider.csproj">
+      <Project>{443382ca-8096-4eea-9f65-771d9c176931}</Project>
+      <Name>Events.EntityFrameworkDataProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\NHibernateDataProvider\Events.NHibernateDataProvider.csproj">
       <Project>{db21a90c-dbd5-4738-b656-ef130c4aa77c}</Project>

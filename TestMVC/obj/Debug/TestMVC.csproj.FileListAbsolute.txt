@@ -204,3 +204,9 @@ C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernateDataProvider.
 C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\AutoMapper.xml
 C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\NHibernate.xml
 C:\Users\Solari\Documents\GitHub\MVC_project\TestMVC\bin\Iesi.Collections.xml
+D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.Integration.Mvc.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.xml
+D:\Документы\ISM\MVC_project\TestMVC\bin\Autofac.Integration.Mvc.xml
+D:\Документы\ISM\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.dll
+D:\Документы\ISM\MVC_project\TestMVC\bin\Events.EntityFrameworkDataProvider.pdb

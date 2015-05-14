@@ -10,6 +10,7 @@ namespace NHibernateDataProvider
 {
     public class NHibernateEventDataProvider : IEventDataProvider
     {
+
         public Event GetById(string id)
         {
             using (ISession session = NHibernateHelper.OpenSession())

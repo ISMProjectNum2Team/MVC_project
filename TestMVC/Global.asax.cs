@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Business;
 using TestMVC.Models;
+using TestMVC.App_Start;
 
 namespace TestMVC
 {
@@ -18,6 +19,7 @@ namespace TestMVC
         {
             AreaRegistration.RegisterAllAreas();
 
+            AutofacConfig.Configuration();
             AutoMapper.Mapper.CreateMap<Event, EventViewModel>();
             AutoMapper.Mapper.CreateMap<EventViewModel, Event>();
             WebApiConfig.Register(GlobalConfiguration.Configuration);

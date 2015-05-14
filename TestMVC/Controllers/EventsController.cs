@@ -14,7 +14,12 @@ namespace TestMVC.Controllers
     {
         //
         // GET: /Main/
-        private NHibernateEventDataProvider data = new NHibernateEventDataProvider();      
+        private readonly IEventDataProvider data;
+
+        public EventsController(IEventDataProvider _data)
+        {
+            data = _data;
+        }
 
         public ActionResult Index()
         {
