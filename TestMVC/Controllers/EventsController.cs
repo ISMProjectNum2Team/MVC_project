@@ -14,11 +14,11 @@ namespace TestMVC.Controllers
     {
         //
         // GET: /Main/
-        private DataProvider data = new DataProvider();      
+        private NHibernateEventDataProvider data = new NHibernateEventDataProvider();      
 
         public ActionResult Index()
         {
-            var result = data.GetAllEvents();
+            var result = data.GetAll();
             var model = Mapper.Map<IList<EventViewModel>>(result);
             return View(model);
         }
@@ -44,7 +44,7 @@ namespace TestMVC.Controllers
             if (ModelState.IsValid)
             {
                 var newEvent = Mapper.Map<EventViewModel, Event>(ev);
-                data.AddEvent(newEvent);
+                data.AddT(newEvent);
             }
             return RedirectToAction("Index", "Events");
         }
