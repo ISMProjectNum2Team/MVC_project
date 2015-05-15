@@ -24,15 +24,14 @@ namespace TestMVC.Controllers
 
         public ActionResult Index()
         {
-            var result = data.GetAllElements();
+            var result = WebCacheManager.FromCache("Events::List", () => { return data.GetAllElements(); });
             var model = Mapper.Map<IList<EventViewModel>>(result);
             return View(model);
         }
         [HttpGet]
         public ActionResult Details(string id)
         {
-            var result = WebCacheManager.FromCache("Events::" + id, () => { return data.GetElementById(id); });
-                
+            var result = WebCacheManager.FromCache("Events::" + id, () => { return data.GetElementById(id); });              
             if (result == null) {
                 return RedirectToRoute("Error.NotFound");
             }
